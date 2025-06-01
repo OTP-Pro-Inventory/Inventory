@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Device Inventory System</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    iframe {
+      width: 100%;
+      height: 80vh;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>📱 Device Inventory</h1>
+      <p>Inventory Management System</p>
+    </div>
+
+    <div class="menu">
+      <button onclick="loadSection('inventory.html')">📦 View Inventory</button>
+      <button onclick="loadSection('add_item.html')">➕ Add Item</button>
+      <button onclick="loadSection('removals.html')">📋 Removal History</button>
+      <button onclick="loadSection('activity_log.html')">📊 Activity Log</button>
+    </div>
+
+    <iframe id="content-frame" src="inventory.html"></iframe>
+  </div>
+
+  <script>
+    function loadSection(section) {
+      document.getElementById('content-frame').src = section;
+    }
+  </script>
+</body>
+</html>
